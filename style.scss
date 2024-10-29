@@ -1,0 +1,219 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap");
+// Colors
+$color1: hsl(254, 88%, 90%); /* Purple 100  */
+$color2: hsl(256, 67%, 59%); /* Purple 500  */
+$color3: hsl(31, 66%, 93%); /* Yellow 100 */
+$color4: hsl(39, 100%, 71%); /* Yellow 500  */
+$color5: hsl(0, 0%, 100%); /* White  */
+$color6: hsl(0, 0%, 7%); /* Black */
+
+// Font weights
+$font-weights: (
+  "Regular": 400,
+  "Medium": 500,
+);
+
+//Font Size
+$font-Size: 1.125em;
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: $color5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+// Container
+.grid-box {
+  border: 2px solid black;
+  width: 62%;
+  margin: auto;
+}
+
+.left {
+  width: 25%;
+}
+.right {
+    width: 75%;
+  }
+
+//Create cell
+.create {
+  background-color: $color3;
+  padding: 1rem;
+  letter-spacing: -2.3px;
+  h3 {
+    font-weight: map-get($map: $font-weights, $key: "Regular");
+    span {
+      color: $color2;
+    }
+  }
+}
+
+.create img {
+  width: 10rem;
+}
+
+//AI cell
+.ai {
+  background-color: $color4;
+  padding: 1rem;
+  letter-spacing: -2.3px;
+  h3 {
+    font-weight: map-get($map: $font-weights, $key: "Regular");
+    
+  }
+}
+
+.ai img {
+  width: 11rem;
+}
+
+//Social Media cell
+.social{
+    background-color: $color2;
+    padding: 1rem;
+    h1{
+        color: $color5;
+        font-weight: map-get($map: $font-weights, $key: "Medium");
+        span{
+            color: $color4;
+        }
+    }
+    p{
+        color: $color5;
+    }
+}
+.social img{
+    width: 12rem;
+}
+
+//Multiple accounts cell
+.multiple-acc{
+    background-color: $color5;
+    padding: 1rem;
+    letter-spacing: -2.3px;
+    overflow-x: hidden;
+    h3{
+        color: $color6;
+        font-weight: map-get($map: $font-weights, $key: "Regular");
+    }
+}
+.multiple-acc img{
+   width: 12rem;
+   margin-bottom: 1rem;
+   margin-left: 0.7rem;
+   
+}
+
+//Schedule cell
+.scheduling{
+    background-color: $color4;
+    padding: 1rem;
+    letter-spacing: -2.3px;
+    border-bottom: 1rem;
+    overflow-y: hidden;
+    h3{
+        font-weight: map-get($map: $font-weights, $key: "Regular");
+    }
+}
+.scheduling img{
+    width: 8rem;
+    margin-bottom: -3rem;
+    
+}
+
+// Timing cell
+.timing{
+background-color: $color1;
+padding: 1rem;
+overflow-x: hidden;
+h3{
+    font-weight: map-get($map: $font-weights, $key: "Medium");
+    line-height: 1;
+}
+}
+.timing img{
+    width: 14.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+//Audience cell
+.audience{
+    background-color: $color5;
+    padding: 1rem;
+   
+}
+
+.audience img{
+    width: 6rem;
+}
+
+//Followers cell
+.followers{
+    background-color:$color2 ;
+    padding: 1rem;
+    h3{
+        color:$color5;
+      
+    }
+}
+.followers img{
+    width: 8rem;
+}
+
+.sub-left {
+  width: 75%;
+}
+.sub-right {
+  width: 35%;
+}
+
+.row{
+    margin: auto;
+}
+// Media Queries
+
+@media screen and (width <= 1024px) {
+}
+
+@media screen and (width <=992px) {
+  .grid-box{
+   /*  width: 80%; */
+    border:1px solid red;
+}
+}
+@media screen and (width <= 768px) {
+    .grid-box{
+        width: 80%;
+        border:1px solid red;
+    }
+  .left,
+  .right,
+  .sub-left,
+  .sub-right {
+    width: auto;
+  }
+}
+@media screen and (width <= 600px) {
+    .grid-box{
+        width: 98%;
+    }
+}
+@media screen and (height >=1366px) {
+}
