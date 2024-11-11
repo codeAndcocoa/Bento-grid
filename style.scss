@@ -1,0 +1,191 @@
+//Fonts
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap");
+$font-weights: (
+  "Regular": 400,
+  "Medium": 500,
+);
+$font-size: 1.2em;
+
+//colors
+$color1: hsl(254, 88%, 90%); /* Purple 100 */
+$color2: hsl(256, 67%, 59%); /* Purple 500  */
+
+$color3: hsl(31, 66%, 93%); /* Yellow 100 */
+$color4: hsl(39, 100%, 71%); /* Yellow 500  */
+
+$color5: hsl(0, 0%, 100%); /* White  */
+$color6: hsl(0, 0%, 7%); /* Black  */
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+//BODY
+body {
+  font-family: "DM Sans", serif;
+  background-color: hsl(255, 57%, 95%) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+//GRID
+.grid {
+  max-width: 60%;
+  margin-top: 2rem;
+}
+
+p {
+  font-size: $font-size;
+  font-weight: map-get($map: $font-weights, $key: "Regular");
+}
+h3 {
+  letter-spacing: -2.1px;
+  font-size: 2rem;
+  font-weight: map-get($map: $font-weights, $key: "Regular");
+}
+.left-blocks {
+  width: 30%;
+}
+.right-blocks {
+  width: 70%;
+}
+.top-right {
+  width: 32%;
+}
+.top-left {
+  width: 68%;
+}
+
+div [class*="col-"] {
+  padding: 1rem;
+}
+//CREATE CELL
+.create {
+  background-color: $color3;
+  span {
+    color: $color2;
+  }
+}
+
+.create img {
+  width: 12rem;
+}
+
+//AI CELL
+.ai {
+  background-color: $color4;
+}
+.ai img {
+  width: 12rem;
+}
+//SOCIAL CELL
+.social {
+  background-color: $color2;
+  span {
+    color: $color4;
+  }
+  h3,
+  p {
+    color: $color5;
+  }
+  h3 {
+    font-weight: map-get($map: $font-weights, $key: "Medium");
+  }
+}
+.social img {
+  max-width: 17rem;
+  min-width: 20rem;
+}
+
+//MULIPLE ACCOUNTS CELL
+.multiple-acc {
+  background-color: $color5;
+  overflow: hidden;
+}
+.multiple-acc img {
+  width: 12rem;
+  margin-left: 2.5rem;
+}
+//SCHEDULING CELL
+.scheduling {
+  background-color: $color4;
+  overflow: hidden;
+}
+.scheduling img {
+  width: 10rem;
+  margin-bottom: -4rem;
+}
+//POSTING CELL
+.posting {
+  background-color: $color1;
+  overflow: hidden;
+}
+.posting img {
+  width: 20rem;
+  margin-left: -0.7rem;
+}
+
+//AUDIENCE CELL
+.audience {
+  background-color: $color5;
+}
+.audience img {
+  width: 8rem;
+}
+//FOLLOWERS CELL
+.followers {
+  background-color: $color2;
+  .text {
+    color: $color5;
+  }
+}
+.followers img {
+  width: 12rem;
+}
+//MEDIA QUERIES
+@media screen and (width <= 992px) {
+  .grid {
+    max-width: 70%;
+  }
+  .right-blocks,
+  .left-blocks,
+  .top-left,
+  .top-right {
+    width: auto;
+  }
+}
+
+@media screen and (width <=768px) {
+  .grid {
+    max-width: 80%;
+  }
+  
+  .multiple-acc img {
+    width: 18rem;
+    margin-left: auto;
+  }
+  .scheduling img {
+    width: 13rem;
+    margin-bottom: -3rem;
+  }
+  
+}
+
+@media screen and (width <=600px) {
+  .grid {
+    max-width: 95%;
+  }
+}
+
+@media screen and (height<= 1366px) {
+  body{
+    min-height: 70vh;
+  }
+}
