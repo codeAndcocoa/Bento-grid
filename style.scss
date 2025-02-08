@@ -63,12 +63,14 @@ h3 {
   width: 68%;
 }
 
-div [class*="col-"] {
-  padding: 1rem;
+div[class^="col-"]{
+  padding: 0.4rem;
 }
 //CREATE CELL
 .create {
+  padding:1rem;
   background-color: $color3;
+ 
   span {
     color: $color2;
   }
@@ -81,6 +83,8 @@ div [class*="col-"] {
 //AI CELL
 .ai {
   background-color: $color4;
+  padding:1rem;
+ 
 }
 .ai img {
   width: 12rem;
@@ -88,6 +92,8 @@ div [class*="col-"] {
 //SOCIAL CELL
 .social {
   background-color: $color2;
+  padding:1rem;
+ 
   span {
     color: $color4;
   }
@@ -106,6 +112,7 @@ div [class*="col-"] {
 
 //MULIPLE ACCOUNTS CELL
 .multiple-acc {
+  padding:1rem;
   background-color: $color5;
   overflow: hidden;
 }
@@ -115,6 +122,7 @@ div [class*="col-"] {
 }
 //SCHEDULING CELL
 .scheduling {
+  padding:1rem;
   background-color: $color4;
   overflow: hidden;
 }
@@ -124,6 +132,7 @@ div [class*="col-"] {
 }
 //POSTING CELL
 .posting {
+  padding:1rem;
   background-color: $color1;
   overflow: hidden;
 }
@@ -134,6 +143,7 @@ div [class*="col-"] {
 
 //AUDIENCE CELL
 .audience {
+  padding:1rem;
   background-color: $color5;
 }
 .audience img {
@@ -141,9 +151,10 @@ div [class*="col-"] {
 }
 //FOLLOWERS CELL
 .followers {
+  padding:1rem;
   background-color: $color2;
   .text {
-    color: $color5;
+    color: $color5; 
   }
 }
 .followers img {
@@ -175,7 +186,9 @@ div [class*="col-"] {
     width: 13rem;
     margin-bottom: -3rem;
   }
-  
+  div [class*="col-"] {
+    padding: 1rem;
+    }
 }
 
 @media screen and (width <=600px) {
